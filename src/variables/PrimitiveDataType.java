@@ -38,13 +38,13 @@ public class PrimitiveDataType {
 		 * 1. 참/거짓 조건을 추적하는 간단한 Flug에 사용한다.
          * 2. 메모리 크기는 1byte를 나타내지만 사용하는 CPU마다 다르기 때문에 정확한 bit의 크기는 알 수 없다.
 		 */
-		
-		// 일반적인 사용법.
+		// 올바른 사용법.
 		boolean bf = false, bt = true;
 		System.out.printf("%s, %s\n\n", bf, bt); // false, true
 		
-		// false, true 외 다른 값을 할당 시.
+		// false, true 외 다른 값을 할당 시 Error.
 		// boolean bl = asdf; // java.lang.Error(compile error) : asdf cannot be resolved to a variable.
+		// boolean b2 = "asdf"; // java.lang.Error(compile error) : Type mismatch: cannot convert from String to boolean
 // ----------------------------------------------------------------------------------------------------------------------------
 		/*
 		 * char(문자형)
@@ -54,13 +54,13 @@ public class PrimitiveDataType {
          * 4. char 값은 작은 따옴표('') 안에 한 글자만 할당할 수 있다.
          * 5. System.out.println(); 에서도 작은 따옴표('') 안에 한 글자만 할당할 수 있다.
 		 */
-		
-		// 일반적인 사용법.
+		// 올바른 사용법.
 		char ch1 = 'a', ch2 = 'A', ch3 = '1', ch4 = 'ㅁ', ch5 = '$';
 		System.out.printf("%s, %s, %s, %s, %s\n", ch1, ch2, ch3, ch4, ch5); // a, A, 1, ㅁ, $
 		
-		// '' 안에 문자가 2개 이상일 경우.
-		// char asdf= 'asdf'; // java.lang.Error(compile error) : Invalid character constant.
+		// '' 안에 문자가 2개 이상 할당 시 Error.
+		// char ch6= 'asdf'; // java.lang.Error(compile error) : Invalid character constant.
+		// char ch7 = 65536; // java.lang.Error(compile error) : Type mismatch: cannot convert from int to char
 		
 		// char로 escape sequence 사용.
 		char t = '\t', n = '\n', r = '\r', sq = '\'', dq = '\"';
@@ -79,7 +79,31 @@ public class PrimitiveDataType {
 		
 		// ASCII코드로 출력.
 		char A = 65;
-		System.out.println(A); // A
+		System.out.println(A + '\n'); // A
 // ----------------------------------------------------------------------------------------------------------------------------
+		/* 
+		 * 정수형 공통 사항
+		 * 1. 부호(+,-)가 있는 정수(2의 보수)를 가지며, 소수 부분이 없는 수를 의미한다.
+		 * 2. 표현 범위를 벗어나면 Overflow 또는 Underflow가 발생해 전혀 다른 값이 저장될 수 있다.
+		 * 3. 정수 리터럴은 2진수(Binary), 10진수(Decimal), 16진수(Hexadecimal) 숫자 시스템으로 표현할 수 있다(접두사 0x는 16진수이고 0b는 2진수이다).
+		 * 4. JavaSE7 이상에서는 숫자 사이에 밑줄(_)을 넣을 수 있다(코드의 가독성 향상).
+		 */
+		
+		/*
+		 * byte(정수형)
+		 * 1. 메모리 절감이 중요한 대규모 Array에서 메모리를 저장하는데 유용할 수 있다.
+		 */
+		// 올바른 사용법.
+		byte b_min = -128, b_max = 127;
+		System.out.printf("%d, %d", b_min, b_max);
+		
+		// 표현 범위 외 다른 값 할당 시 Error.
+		// byte b1 = 128; // java.lang.Error(compile error) : Type mismatch: cannot convert from int to byte
+		// byte b2 = asdf; // java.lang.Error(compile error) : asdf cannot be resolved to a variable
+// ----------------------------------------------------------------------------------------------------------------------------
+		/*
+		 * short(정수형)
+		 * 1. 메모리 절감이 중요한 대규모 Array에서 메모리를 저장하는데 유용할 수 있다.
+		 */
 	}
 }

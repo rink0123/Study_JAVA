@@ -1,6 +1,11 @@
 package variables;
+/*
+ * 참고 사이트
+ * [Java Tutorials - Variables] https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html
+ * [위키백과 - Naming convention (Programing)] https://en.wikipedia.org/wiki/Naming_convention_(programming)
+ */
 
-// 자바 명명 규칙
+/* 자바 명명 규칙 */
 public class JavaNamingConvention {
 	
 	public static void main(String[] args) {

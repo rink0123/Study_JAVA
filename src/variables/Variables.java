@@ -1,4 +1,12 @@
 package variables;
+/*
+ * 참고 사이트
+ * [Java Tutorials - Variables] https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html
+ * [위키백과 - 인스턴스 변수] https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4_%EB%B3%80%EC%88%98
+ * [위키백과 - 클래스 변수] https://ko.wikipedia.org/wiki/%ED%81%B4%EB%9E%98%EC%8A%A4_%EB%B3%80%EC%88%98
+ * [위키백과 - 지역 변수] https://ko.wikipedia.org/wiki/%EC%A7%80%EC%97%AD_%EB%B3%80%EC%88%98
+ * [위키백과 - 매개 변수] https://ko.wikipedia.org/wiki/%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98_(%EC%BB%B4%ED%93%A8%ED%84%B0_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)
+ */
 
 /*
  * 변수(Variable)

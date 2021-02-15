@@ -24,24 +24,24 @@ public class PrimitiveDataType {
 	 *      
 	 *      
 	 * 3. 기본 자료형(Primitive Data Type)의 예약어(keyword) 8가지
-	 * data type	keyword		memory size			default			range
-	 * 논리형		boolean 	1byte(1bit)			false			false, true
-	 * 문자형		char		2byte(16bit=216) 	0(='\u0000')	0~65535('\u0000' ~ '\uffff')(Unicode(UTF-16) : 영어/숫자=1byte, 그 외 다국어=2byte)
-	 * 정수형		byte		1byte(8bit=28)		0				-128 ~ 127(-2^7 ~ 2^7-1)
-	 * 				short		2byte(16bit=216)	0				-32,768 ~ 32,767(-2^15 ~ 2^15-1)
-	 * 				int			4byte(32bit=232)	0				-2147483648 ~ 2147483647(-2^31 ~ 2^31-1)
-	 * 				long		8byte(64bit=264)	0L				-9223372036854775808 ~ 9223372036854775807(-2^63 ~ 2^63-1)
-	 * 실수형		float		4byte(32bit=232)	0.0f			±1.4E-45 ~ ±3.4028235E38(±1.4 x 10^-45 ~ ±3.4028235 x 10^38)(ANSI/IEEE 754-1985 표준)
-	 * 				double		8byte(64bit=264)	0.0d			±4.9E-324 ~ ±1.7976931348623157E308(±4.9 x 10^-324 ~±1.7976931348623157 x 10^308)(ANSI/IEEE 754-1985 표준)
+	 * DataType  Keyword     MemorySize         Default			Range
+	 * 논리형     boolean    1byte(1bit)         false          false, true
+	 * 문자형     char       2byte(16bit=216)    0(='\u0000')   0~65535('\u0000' ~ '\uffff')(Unicode(UTF-16) : 영어/숫자=1byte, 그 외 다국어=2byte)
+	 * 정수형     byte       1byte(8bit=28)      0              -128 ~ 127(-2^7 ~ 2^7-1)
+	 * 정수형     short      2byte(16bit=216)    0              -32,768 ~ 32,767(-2^15 ~ 2^15-1)
+	 * 정수형     int        4byte(32bit=232)    0              -2147483648 ~ 2147483647(-2^31 ~ 2^31-1)
+	 * 정수형     long       8byte(64bit=264)    0L             -9223372036854775808 ~ 9223372036854775807(-2^63 ~ 2^63-1)
+	 * 실수형     float      4byte(32bit=232)    0.0f           ±1.4E-45 ~ ±3.4028235E38(±1.4 x 10^-45 ~ ±3.4028235 x 10^38)(ANSI/IEEE 754-1985 표준)
+	 * 실수형     double     8byte(64bit=264)    0.0d           ±4.9E-324 ~ ±1.7976931348623157E308(±4.9 x 10^-324 ~±1.7976931348623157 x 10^308)(ANSI/IEEE 754-1985 표준)
 	 * 
 	 * 
-	 * 9. 기본 자료형(Primitive Data Type)과 참조 자료형(Reference Data Type)의 차이
-	 * 9.1. 기본 자료형(Primitive Data Type)은 Java에서 사전 정의돼있다. 참조 자료형(Reference Data Type)은 프로그래머가 작성하며 Java에서 정의하지 않는다. (String 제외).
-	 * 9.2. 참조 자료형(Reference Data Type)은 특정 작업을 수행하기 위해 메서드를 호출하는 데 사용할 수 있지만 기본 자료형(Primitive Data Type)은 할 수 없습니다.
-	 * 9.3. 기본 자료형(Primitive Data Type)은 null값을 넣을 수 없지만 참조 자료형(Reference Data Type)은 넣을 수 있다.
-	 * 9.4. 기본 자료형(Primitive Data Type)은 첫 글자가 소문자로 시작하는 반면 참조 자료형(Reference Data Type)은 대문자로 시작한다.
-	 * 9.5. 기본 자료형(Primitive Data Type)의 크기는 데이터 유형에 따라 다르지만 참조 자료형(Reference Data Type)은 모두 동일한 크기를 갖는다.
-	 * 9.6. 참조 자료형(Reference Data Type)의 예로는 String, Arrays, Classes, Interface 등이 있다.
+	 * 4. 기본 자료형(Primitive Data Type)과 참조 자료형(Reference Data Type)의 차이
+	 * 4.1. 기본 자료형(Primitive Data Type)은 Java에서 사전 정의돼있다. 참조 자료형(Reference Data Type)은 프로그래머가 작성하며 Java에서 정의하지 않는다. (String 제외).
+	 * 4.2. 참조 자료형(Reference Data Type)은 특정 작업을 수행하기 위해 메서드를 호출하는 데 사용할 수 있지만 기본 자료형(Primitive Data Type)은 할 수 없습니다.
+	 * 4.3. 기본 자료형(Primitive Data Type)은 null값을 넣을 수 없지만 참조 자료형(Reference Data Type)은 넣을 수 있다.
+	 * 4.4. 기본 자료형(Primitive Data Type)은 첫 글자가 소문자로 시작하는 반면 참조 자료형(Reference Data Type)은 대문자로 시작한다.
+	 * 4.5. 기본 자료형(Primitive Data Type)의 크기는 데이터 유형에 따라 다르지만 참조 자료형(Reference Data Type)은 모두 동일한 크기를 갖는다.
+	 * 4.6. 참조 자료형(Reference Data Type)의 예로는 String, Arrays, Classes, Interface 등이 있다.
 	 */
 	public static void main(String[] args) {
 		/* 

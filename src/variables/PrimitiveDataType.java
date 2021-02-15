@@ -121,10 +121,9 @@ public class PrimitiveDataType {
         System.out.println(s1 + ", " + s2); // 32767, -32768
         int i1 = 2147483647, i2 = -2147483648;
         System.out.println(i1 + ", " + i2); // 2147483647, -2147483648
-		/*
-		 * long 값이 int의 최솟값 or 최댓값을 초과할 경우 long 리터럴 끝에 L(or l)을 붙여야 한다. l은 1과 구분이 힘들어 L을
-		 * 주로 붙여 사용하며 평소 int와 long값을 구분하기 위해 리터럴 끝에 L을 붙인다.
-		 */
+        
+		// long 값이 int의 최솟값 or 최댓값을 초과할 경우 long 리터럴 끝에 L(or l)을 붙여야 한다. l은 1과 구분이 힘들어 L을
+		// 주로 붙여 사용하며 평소 int와 long값을 구분하기 위해 리터럴 끝에 L을 붙인다.
         long l1 = 9223372036854775807L, l2 = -9223372036854775808L;
         System.out.println(l1 + ", " + l2); // 9223372036854775807, -9223372036854775808
         
@@ -158,15 +157,70 @@ public class PrimitiveDataType {
 		 * 1. ANSI/IEEE 754-1985 표준 부동 소수점 방식을 따르고 있다. 과거에는 실수를 표현할 때 float을 많이 사용했지만,
 		 *    하드웨어의 발달로 인한 메모리 공간의 증가로 현재에는 double형을 가장 많이 사용한다.
 		 * 2. ANSI/IEEE 754-1985 표준 부동 소수점(floating point) 방식(float) : 부호(1bit), 지수부(8bit), 가수부(23bit). 총 32bit.
-		 * 3. ANSI/IEEE 754-1985표준 고정 소수점(fixed point) 방식(double) : 부호(1bit), 지수부(11bit), 가수부(52bit). 총 64bit.
+		 * 3. ANSI/IEEE 754-1985 표준 고정 소수점(fixed point) 방식(double) : 부호(1bit), 지수부(11bit), 가수부(52bit). 총 64bit.
 		 */
         
 		/* 일반적인 사용법 */
-        // 정수로 표기된 float 값이 int의 최솟값 or 최댓값을 초과할 경우 float 값 뒤에 f(or F)를 붙여야 한다. 소수점으로 표기 시 무조건 f(or F)를 붙여야 한다.
+        // 정수로 표기된 float 값이 int의 최솟값 or 최댓값을 초과할 경우 float 값 뒤에 f(or F)를 붙여야 한다.
+        // 소수점으로 표기 시 무조건 f(or F)를 붙여야 한다.
         float f1 = 3.4028235E38f, f2 = 1.4E-45f;
         System.out.println(f1 + ", " + f2); // 3.4028235E38, 1.4E-45
-        // int 리터럴 범위 내에 정수 할당할 경우 f(or F)는 빼도 된다. 
-        float f3 = 2147483647;
-        System.out.println(f3);
+        float f3 = 2147483648f;
+        System.out.println(f3); // 2.14748365E9
+        // 정수로 표기된 double 값이 int의 최솟값 or 최댓값을 초과할 경우 double 값 뒤에 d(or D)를 붙여야 한다.
+        // 규칙에 의해 값 뒤에 d(or D)는 생략이 가능하다.
+        double d1 = 4.9E-324, d2 = 1.7976931348623157E308;
+        System.out.println(d1 + ", " + d2);
+        double d3 = 2147483648d;
+        System.out.println(d3); // 2.147483648E9
+        
+        
+		/* 잘못된 사용법 */
+        // float f4 = 2147483648; // int 리터럴 범위 초과. java.lang.Error(compile error): The literal 2147483648 of type int is out of range
+        // float f5 = asdf; // 변수값 확인 불가. java.lang.Error(compile error): asdf cannot be resolved to a variable
+        // float f6 = ""; // 데이터 타입 불일치. java.lang.Error(compile error): Type mismatch: cannot convert from String to float
+        
+		/* 
+		 * 부동 소수점 방식의 오차
+		 * 실수끼리의 계산은 정확한 표현이 아닌 근사치를 표현할 뿐.
+		 */
+        double d4 = 0.1, d5 = 0.1;
+        System.out.println(d4 * d5); // 0.010000000000000002
+// ---------------------------------------------------------------------------------------------------------------
+		/* 
+		 * 숫자 리터럴(Numeric Literals)에서 밑줄 문자 사용
+		 * avaSE7 이상에서는 숫자 리터럴의 숫자 사이에 임의의 수의 밑줄 문자(_)가 나타날 수 있다.
+		 * 숫자 리터럴로 자릿수 그룹을 구분하여 코드의 가독성을 향상할 수 있다.
+		 */
+        
+		/* 일반적인 사용법 */
+        long creditCardNumber = 1234_5678_9012_3456L;
+        System.out.println(creditCardNumber); // 1234567890123456
+        long socialSecurityNumber = 999_99_9999L;
+        System.out.println(socialSecurityNumber); // 999999999
+        float pi = 3.14_15F;
+        System.out.println(pi); // 3.1415
+        long hexBytes = 0xFF_EC_DE_5E;
+        System.out.println(hexBytes); // -1253794
+        long hexWords = 0xCAFE_BABE;
+        System.out.println(hexWords); // -889275714
+        long maxLong = 0x7fff_ffff_ffff_ffffL;
+        System.out.println(maxLong); // 9223372036854775807
+        byte nybbles = 0b0010_0101;
+        System.out.println(nybbles); // 37
+        long bytes = 0b11010010_01101001_10010100_10010010;
+        System.out.println(bytes); // -764832622
+        
+        
+		/* 잘못된 사용법 */
+        // int x1 = 5_2; // OK, 하지만 가독성이 떨어짐.
+        // int x3 = 5_______2; // OK, 하지만 가독성이 떨어짐.
+        // int x6 = 0x5_2; // OK, 하지만 가독성이 떨어짐.
+        // float pi1 = 3_.1415F; // 유효하지 않음: 밑줄을 소수점 근처에 놓을 수 없습니다.
+        // long socialSecurityNumber1 = 999_99_9999_L; // 유효하지 않음: L 접미사 앞에 밑줄을 넣을 수 없습니다.
+        // int x2 = 52_; // 유효하지 않음: 리터럴 끝에 밑줄을 넣을 수 없습니다.
+        // int x4 = 0_x52; // 유효하지 않음: 0x radix 접두사에 밑줄을 넣을 수 없습니다.
+        // int x5 = 0x_52; // 유효하지 않음: 숫자의 시작 부분에 밑줄을 넣을 수 없습니다.
+        // int x7 = 0x52_; // 유효하지 않음: 숫자의 끝에 밑줄을 넣을 수 없습니다.
 	}
 }

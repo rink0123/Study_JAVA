@@ -1,17 +1,25 @@
 package variables;
 
+/**
+ * <h3>기본 자료형(Primitive data type)</h3>
+ * 
+ * <h4>참고 사이트</h4>
+ * <ul>
+ * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">Java Tutorials - Variables</a></li>
+ * <li><a href="https://ko.wikipedia.org/wiki/%EC%9B%90%EC%8B%9C_%EC%9E%90%EB%A3%8C%ED%98%95">위키백과 - 원시 자료형</a></li>
+ * <li><a href="https://en.wikipedia.org/wiki/Primitive_wrapper_class_in_Java">위키백과 - Primitive wrapper class in Java</a></li>
+ * <li><a href="http://www.tcpschool.com/java/java_datatype_constant">TCP School > JAVA > 8) 상수</a></li>
+ * <li><a href="http://www.tcpschool.com/java/java_datatype_basic">TCP School > JAVA > 9) 기본 자료</a></li>
+ * <li><a href="http://www.tcpschool.com/java/java_datatype_floatingPointNumber">TCP School > JAVA > 10) 실수의 표현</a></li>
+ * </ul>
+ * 
+ * @since JDK 11
+ * @version 1.0.0.RELEASE
+ * @author 강민성
+ */
 public class PrimitiveDataType {
 
 	/*
-	 * 참고 사이트
-	 * [Java Tutorials - Variables] https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
-	 * [위키백과 - 원시 자료형] https://ko.wikipedia.org/wiki/%EC%9B%90%EC%8B%9C_%EC%9E%90%EB%A3%8C%ED%98%95
-	 * [위키백과 - Primitive wrapper class in Java] https://en.wikipedia.org/wiki/Primitive_wrapper_class_in_Java
-	 * [TCP School > JAVA > 8) 상수] http://www.tcpschool.com/java/java_datatype_constant
-	 * [TCP School > JAVA > 9) 기본 자료] http://www.tcpschool.com/java/java_datatype_basic
-	 * [TCP School > JAVA > 10) 실수의 표현] http://www.tcpschool.com/java/java_datatype_floatingPointNumber
-	 * 
-	 * 
 	 * 1. 기본 자료형(Primitive Data Type)이란
 	 * 1.1. Java에서는 여러 형태의 타입을 미리 정의하여 제공하고 있는데, 이것을 기본 자료형(Primitive Data Type)이라고 한다.
 	 * 1.2. Data Type은 해당 데이터가 메모리에 어떻게 저장되고, 프로그램에서 어떻게 처리되어야 하는지를 명시적으로 알려주는 역할을 한다.

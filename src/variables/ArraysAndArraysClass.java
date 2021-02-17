@@ -1,5 +1,9 @@
 package variables;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * <h3>배열과 배열 클래스(Arrays and arrays class)</h3>
  * 
@@ -7,6 +11,7 @@ package variables;
  * <ul>
  * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html">Java Tutorials - Variables</a></li>
  * <li><a href="http://www.tcpschool.com/java/java_array_memory">TCP School > JAVA > 5. 배열</a></li>
+ * <li><a href="http://www.tcpschool.com/java/java_api_arrays">TCP School > JAVA > 53) Arrays 클래스</a></li>
  * </ul>
  * 
  * @since JDK 11
@@ -39,6 +44,29 @@ public class ArraysAndArraysClass {
 	 *               실수형 = ±n.n ~ ±n.n 
 	 */
 	public static void main(String[] args) {
+		/* 
+		 * 배열 선언 및 생성 시 해당 type 기본값으로 초기화되어 있다.
+		 */
+		boolean[] bdefault = new boolean[10];
+		for(int i = 0 ; i < bdefault.length ; i++)
+			System.out.print(bdefault[i] + " "); // false false false false false false false false false false
+		System.out.println();
+		
+		char[] chdefault = new char[10];
+		for(int i = 0 ; i < chdefault.length ; i++)
+			System.out.print(chdefault[i] + ", "); //   ,  ,  ,  ,  ,  ,  ,  ,  ,  ,
+		System.out.println();
+		
+		int[] idefault = new int[10];
+		for(int i = 0 ; i < idefault.length ; i++)
+			System.out.print(idefault[i] + " "); // 0 0 0 0 0 0 0 0 0 0
+		System.out.println();
+		
+		double[] ddefault = new double[10];
+		for(int i = 0 ; i < ddefault.length ; i++)
+			System.out.print(ddefault[i] + " "); // 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+		System.out.println();
+// ------------------------------------------------------------------------------------------------
 		/*
 		 * 1차원 배열 선언, 생성, 초기화, 액세스 방법 1
 		 * 1. 배열 선언과 생성을 따로 함.
@@ -103,5 +131,81 @@ public class ArraysAndArraysClass {
 		// 000
 		// 111
 		// 222
+// ------------------------------------------------------------------------------------------------
+		/* 
+		 * Arrays 클래스(쓰는 메소드만 소개)
+		 * 1. Arrays 클래스에는 배열을 다루기 위한 다양한 메소드가 포함되어 있다.
+		 * 2. Arrays 클래스의 모든 메소드는 클래스 메소드(static method)이므로, 객체를 생성하지 않고도 바로 사용할 수 있다.
+		 * 3. 이 클래스는 java.util 패키지에 포함되므로, 반드시 import 문으로 java.util 패키지를 불러오고 나서 사용해야 한다.
+		 */
+		
+		/* 
+		 * binarySearch(type[] a, type key)
+		 * 1. 전달받은 배열에서 특정 객체의 위치를 이진 검색 알고리즘을 사용하여 검색한 후, 해당 위치(배열의 index)를 반환.
+		 * 2. 이 메소드는 이진 검색 알고리즘을 사용하므로, 매개변수로 전달되는 배열이 sort() 메소드 등을 사용하여 미리 정렬되어 있어야만 제대로 동작.
+		 * 3. Parameters:
+		 *        a=검색할 배열.
+		 *        key=찾을 값.
+		 * 4. returns:
+		 *        success=index.
+		 *        fail=음수 반환.
+		 *            ex) 찾을 값 : 5
+		 *                index      0     1     2     3
+		 *                value   1  2  3  4  5  7  8  9  10
+		 *               return  -1    -2    -3    -4     -5
+		 */
+		int[] arrInt5 = new int[10];
+		for (int i = 0; i < arrInt5.length; i++)
+			arrInt5[i] = i + 1;
+		System.out.println(Arrays.binarySearch(arrInt5, 1)); // 0
+		System.out.println(Arrays.binarySearch(arrInt5, 0, 2, 2)); // 1
+		
+		
+		/* 
+		 * sort(type[] a) - 오름차순, 내림차순.
+		 * 1. 전달받은 배열의 모든 요소를 오름차순으로 정렬.
+		 * 2. Parameters:
+		 *        a=정렬할 배열.
+		 */
+		int[] arrInt6 = { 5, 7, 1, 2, 3, 9, 8, 4, 6 };
+
+		Arrays.sort(arrInt6); // 오름차순 정렬.
+		for (int i = 0; i < arrInt6.length; i++)
+			System.out.print(arrInt6[i] + " "); // 1 2 3 4 5 6 7 8 9
+		System.out.println();
+
+		// 내림차순 정렬하려면 원시 데이터를 못 받기 때문에 같은 타입의 wrapper class로 변환해야 한다.
+		Integer[] arrInt7 = Arrays.stream(arrInt6).boxed().toArray(Integer[]::new);
+		Arrays.sort(arrInt7, Collections.reverseOrder()); // 내림차순 정렬.
+		for (int i = 0; i < arrInt7.length; i++)
+			System.out.print(arrInt7[i] + " "); // 9 8 7 6 5 4 3 2 1
+		System.out.println();
+		
+		
+		/* 
+		 * asList()
+		 * 1.전달받은 배열을 고정 크기의 리스트(list)로 변환하여 반환함.
+		 * 2. Type Parameters:
+		 *        <T> wrapper class = 배열의 타입.
+		 *    Parameters:
+		 *        List 타입으로 바꿀 배열.
+		 *    Returns:
+		 *        List 타입으로 바뀐 배열.
+		 */
+		// List<T>의 T는 Type의 약자로 wrapper class, String, Object로 할당한다.
+		// String을 제외한 나머지 타입들을 <T>와 같은 타입의 wrapper class로 변환해야 한다.
+		int[] arrInt8 = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		// String을 제외, 나머지 type[] -> List 변환.
+		List<Integer> arrList = Arrays.asList(Arrays.stream(arrInt8).boxed().toArray(Integer[]::new));
+		for (int i = 0; i < arrList.size(); i++)
+			System.out.print(arrList.get(i) + " "); // 1 2 3 4 5 6 7 8 9
+		System.out.println();
+		
+		// String[] -> List 변환.
+		String[] arrInt9 = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+		List<String> arrList1 = Arrays.asList(arrInt9);
+		for (int i = 0; i < arrList1.size(); i++)
+			System.out.print(arrList1.get(i) + " "); // 1 2 3 4 5 6 7 8 9
+		System.out.println();
 	}
 }

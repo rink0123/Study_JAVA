@@ -9,7 +9,8 @@ import java.util.List;
  * 
  * <h4>참고 사이트</h4>
  * <ul>
- * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html">Java Tutorials - Variables</a></li>
+ * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html">
+ * Java Tutorials > Language Basics > Variables > Arrays</a></li>
  * <li><a href="http://www.tcpschool.com/java/java_array_memory">TCP School > JAVA > 5. 배열</a></li>
  * <li><a href="http://www.tcpschool.com/java/java_api_arrays">TCP School > JAVA > 53) Arrays 클래스</a></li>
  * </ul>

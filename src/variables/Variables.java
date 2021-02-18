@@ -5,7 +5,8 @@ package variables;
  * 
  * <h4>참고 사이트</h4>
  * <ul>
- * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html">Java Tutorials - Variables</a></li>
+ * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html">
+ * Java Tutorials > Language Basics > Variables</a></li>
  * <li><a href="https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4_%EB%B3%80%EC%88%98">위키백과 - 인스턴스 변수</a></li>
  * <li><a href="https://ko.wikipedia.org/wiki/%ED%81%B4%EB%9E%98%EC%8A%A4_%EB%B3%80%EC%88%98">위키백과 - 클래스 변수</a></li>
  * <li><a href="https://ko.wikipedia.org/wiki/%EC%A7%80%EC%97%AD_%EB%B3%80%EC%88%98">위키백과 - 지역 변수</a></li>

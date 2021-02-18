@@ -5,7 +5,8 @@ package operators;
  * 
  * <h4>참고 사이트</h4>
  * <ul>
- * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html">Java Tutorials - Assignment, Arithmetic, and Unary Operators</a></li>
+ * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html">
+ * Java Tutorials > Language Basics > Operators > Assignment, Arithmetic, and Unary Operators</a></li>
  * <li><a href="http://www.tcpschool.com/java/java_operator_assignment">TCP School > JAVA > 13) 대입 연산자</a></li>
  * </ul>
  * 
@@ -66,7 +67,6 @@ public class AssignmentOperators {
 		System.out.println(ass7); // 0
 		
 		// 복합 대입_비트 OR(|=).
-		// 일반 수학으로 1+1=2가 아닌 기계어로 연산 처리하기 때문에 1+1=1이다.
 		int ass8 = 8;
 		ass8 |= 3; // 2진 OR 연산.
 		/* 

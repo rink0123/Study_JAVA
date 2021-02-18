@@ -5,7 +5,8 @@ package variables;
  * 
  * <h4>참고 사이트</h4>
  * <ul>
- * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">Java Tutorials - Variables</a></li>
+ * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">
+ * Java Tutorials > Language Basics > Variables > Primitive Data Types</a></li>
  * <li><a href="https://ko.wikipedia.org/wiki/%EC%9B%90%EC%8B%9C_%EC%9E%90%EB%A3%8C%ED%98%95">위키백과 - 원시 자료형</a></li>
  * <li><a href="https://en.wikipedia.org/wiki/Primitive_wrapper_class_in_Java">위키백과 - Primitive wrapper class in Java</a></li>
  * <li><a href="http://www.tcpschool.com/java/java_datatype_constant">TCP School > JAVA > 8) 상수</a></li>

@@ -5,7 +5,8 @@ package variables;
  * 
  * <h4>참고 사이트</h4>
  * <ul>
- * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html">Java Tutorials - Variables</a></li>
+ * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html">
+ * Java Tutorials > Language Basics > Variables</a></li>
  * <li><a href="https://en.wikipedia.org/wiki/Naming_convention_(programming)">위키백과 - Naming convention (Programing)</a></li>
  * </ul>
  * 

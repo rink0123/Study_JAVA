@@ -5,7 +5,8 @@ package operators;
  * 
  * <h4>참고 사이트</h4>
  * <ul>
- * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html">Java Tutorials - Bitwise and Bit Shift Operators</a></li>
+ * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html">
+ * Java Tutorials > Language Basics > Operators > Bitwise and Bit Shift Operators</a></li>
  * <li><a href="http://www.tcpschool.com/java/java_operator_bitwise">TCP School > JAVA > 17) 비트 연산자</a></li>
  * </ul>
  * 
@@ -38,8 +39,6 @@ public class BitwiseBitShiftOperators {
 		
 		/* 
 		 * 비트 OR(|).
-		 * 일반 수학으로 1+1=2가 아닌 기계어로 연산 처리하기 때문에 1+1=1이다.
-		 * 
 		 * 10진수 -> 2진수 변환 및 계산 -> 10진수 반환.
 		 *     2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
 		 *      0   0   0   0   1   1   1   1 = 15
@@ -62,18 +61,51 @@ public class BitwiseBitShiftOperators {
 		
 		/* 
 		 * 비트 NOT, 1의 보수(^).
-		 * 
+		 * ~연산을 하면 비트가 반전되지만,
+		 * 반전된 비트는 왼쪽 끝이 1이기 때문에 컴퓨터는 음수로 인식.
+		 * 컴퓨터는 음수인 해당 비트를 10진수로 출력하기 위해 2의 보수 작업을 진행.
+		 * 2의 보수는 컴퓨터가 음수를 표현하기 위한 방법.
 		 * 
 		 * 10진수 -> 2진수 변환 및 계산 -> 10진수 반환.
-		 * 2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
-		 * 1)   0   0   0   0   1   1   1   1 = 15
-		 * 2) - 1   1   1   1   0   0   0   0 = -240
-		 * 
-		 * - 1   1   1   1   0   0   0   0 = 240
-		 *   0   0   0   0   0   0   0   1
-		 * -----------------------------------------------
-		 * (부호 반전) 0   0   0   1   0   0   0   0 = -16
+		 *     2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
+		 * 1)   0   0   0   0   1   1   1   1 = 15  -> 기존값
+		 * 2)   1   1   1   1   0   0   0   0 = 240 -> 비트 NOT(반전)
+		 * 3) - 0   0   0   0   1   1   1   1 = -15 -> 1의 보수
+		 * 4) - 0   0   0   1   0   0   0   0 = -16 -> 2의 보수
 		 */
 		System.out.println(~bbso1); // -16
+		
+		/* 
+		 * 부호 있는 비트 왼쪽 시프트(<<).
+		 * 왼쪽으로 bit n칸 이동.
+		 * 
+		 * 10진수 -> 2진수 변환 및 계산 -> 10진수 반환.
+		 *         2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
+		 * 1)       0   0   0   0   1   1   1   1 = 15
+		 * 2) shift 0   0   0   1   1   1   1   0 = 30
+		 */
+		System.out.println(bbso1 << bbso2); // 30
+		
+		/* 
+		 * 부호 있는 비트 오른쪽 시프트(<<).
+		 * 오른쪽으로 bit n칸 이동.
+		 * 
+		 * 10진수 -> 2진수 변환 및 계산 -> 10진수 반환.
+		 *         2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
+		 * 1)       0   0   0   0   1   1   1   1 = 15
+		 * 2) shift 0   0   0   0   0   1   1   1 = 7
+		 */
+		System.out.println(bbso1 >> bbso2); // 7
+		
+		/* 
+		 * 부호 없는 비트 오른쪽 시프트(<<).
+		 * 오른쪽으로 bit n칸 이동.
+		 * 
+		 * 10진수 -> 2진수 변환 및 계산 -> 10진수 반환.
+		 *         2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
+		 * 1)       0   0   0   0   1   1   1   1 = 15
+		 * 2) shift 0   0   0   0   0   1   1   1 = 7
+		 */
+		System.out.println(bbso1 >>> bbso2); // 7
 	}
 }

@@ -5,7 +5,8 @@ package operators;
  * 
  * <h4>참고 사이트</h4>
  * <ul>
- * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html">Java Tutorials - Equality, Relational, and Conditional Operators</a></li>
+ * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html">
+ * Java Tutorials > Language Basics > Operators > Equality, Relational, and Conditional Operators</a></li>
  * <li><a href="http://www.tcpschool.com/java/java_operator_comparison">TCP School > JAVA > 15) 비교 연산자</a></li>
  * </ul>
  * 

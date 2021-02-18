@@ -5,7 +5,8 @@ package operators;
  * 
  * <h4>참고 사이트</h4>
  * <ul>
- * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html">Java Tutorials - Operators</a></li>
+ * <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html">
+ * Java Tutorials > Language Basics > Operators</a></li>
  * <li><a href="http://www.tcpschool.com/java/java_operator_arithmetic">TCP School > JAVA > 12)산술연산자</a></li>
  * </ul>
  * 

@@ -22,7 +22,7 @@ public class Operators {
 	 * 
 	 * 
 	 * 2. JAVA에서 제공하는 대표적인 연산자.
-	 * 2.2. 대입 연산자(Assignment Operator)
+	 * 2.2. 할당 연산자(Assignment Operator)
 	 *      (=, +=, -=, *=, /=, %=, &=, |=, ^=, <<=, >>=, >>>=)
 	 * 2.1. 산술 연산자(Arithmetic Operators)
 	 *      (+, -, *, /, %) 

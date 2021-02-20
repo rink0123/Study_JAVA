@@ -1,4 +1,4 @@
-package variables;
+package Variables;
 
 import java.util.Arrays;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package variables;
+package Variables;
 
 /**
  * <h3>변수(Variables)</h3>

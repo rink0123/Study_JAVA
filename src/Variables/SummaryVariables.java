@@ -1,4 +1,4 @@
-package variables;
+package Variables;
 
 /**
  * <h3>변수 요약(Summary of Variables)</h3>

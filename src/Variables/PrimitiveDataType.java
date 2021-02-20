@@ -1,4 +1,4 @@
-package variables;
+package Variables;
 
 /**
  * <h3>기본 자료형(Primitive data type)</h3>

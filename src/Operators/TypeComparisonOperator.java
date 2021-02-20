@@ -1,4 +1,4 @@
-package operators;
+package Operators;
 
 import java.util.ArrayList;
 

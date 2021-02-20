@@ -1,4 +1,4 @@
-package variables;
+package Variables;
 
 /**
  * <h3>JAVA 명명 규칙(JAVA naming convention)</h3>

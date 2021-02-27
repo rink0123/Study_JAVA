@@ -6,9 +6,9 @@ package ClassandObjects;
  * <h4>참고 사이트</h4>
  * <ul>
  * <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html">
- * Java Tutorials > Language Basics > Classes</a></li>
- * <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html">
- * Java Tutorials > Language Basics > Classes</a></li>
+ * Java Tutorials > Classes and Objects > Classes</a></li>
+ * <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html">
+ * Java Tutorials > Classes and Objects > Declaring Classes</a></li>
  * <li><a href="http://www.tcpschool.com/java/java_class_intro">TCP School > JAVA > 26) 클래스의 개념</a></li>
  * <li><a href="http://www.tcpschool.com/java/java_class_component">TCP School > JAVA > 27) 클래스의 구성</a></li>
  * <li><a href="http://www.tcpschool.com/java/java_class_declaration">TCP School > JAVA > 28) 클래스의 선언</a></li>
@@ -28,31 +28,37 @@ public class DeclaringClasses {
 	 * 3. 객체를 만들어 내기 위한 설계도와 같은 개념을 클래스(class)라고 한다.
 	 * 
 	 * 
-	 * 클래스(Class)
-	 * 1. 클래스는 객체 지향 프로그래밍(OOP, Object-Oriented Programming)를 정의하는 개념 중 하나로
-	 *    , 특정 객체를 생성하기 위해 변수와 메소드를 정의하는 일종의 틀(Blueprint, 청사진)이다.
-	 * 2. 객체를 정의하기 위한 상태(멤버 변수=필드)와 객체의 행동을 나타내는 method(함수)로 구성된다.
-	 *    또한, 클래스는 생성된 객체의 필드를 초기화해주는 특별한 메소드인 생성자(constructor)를 가진다.
-	 * 3. 템플릿을 사용하면 객체를 클래스로 정의할 때 멤버의 자료형을 미리 정하지 않고 객체를 사용할 때 결정할 수 있다.
-	 *    이를 통해 클래스나 멤버의 중복 정의를 하지 않아도 되므로 효율적으로 코딩이 가능하다.
-	 * 4. 객체는 클래스로 규정된 인스턴스로서, 변수 대신 실제값을 가진다.
-	 * 5. Java에서 클래스를 선언하는 방법은 접근 제어자와 함께 class 키워드를 사용하면 된다.
+	 * class(클래스)
+	 * 1. class는 객체 지향 프로그래밍(OOP, Object-Oriented Programming)를 정의하는 개념 중 하나로,
+	 *    특정 객체를 생성하기 위해 variable(변수)와 method(함수)를 정의하는 일종의 틀(Blueprint, 청사진)이다.
+	 * 2. 객체를 정의하기 위한 상태(member variable=field)와 객체의 행동을 나타내는 method(함수)로 구성된다.
+	 *    또한, 생성된 객체의 field를 초기화해주는 특별한 method인 constructor(생성자)를 가진다.
+	 * 3. 객체는 class로 규정된 instance로서, 변수 대신 실제값을 가진다.
 	 * 
 	 * 
-	 * 클래스에 대한 중요한 몇 가지 개념
-	 * . 명명 규칙에 의해 클래스 선언 시 첫 글자는 영대문자로 선언해야 한다.
+	 * class 선언 방법
+	 * public class Car { -> 순서대로 접근제어자, 키워드, class명.
+	 *     private String modelName; -> class 필드;.
+	 *     private int modelYear;
+	 *     ...
+	 *     public void brake() {} -> class 메소드;.
+	 *     ...
+	 * } -> class의 멤버
 	 * 
-	 * . 클래스는 전부 혹은 일부를 그 클래스 특성으로부터 상속받는 서브클래스를 가질 수 있으며, 클래스는 각 서브클래스에 대해 수퍼클래스가 된다.
-	 * . 서브클래스는 자신만의 메소드와 변수를 정의할 수도 있다. 이러한 클래스와 그 서브클래스 간의 구조를 "클래스 계층(hierarchy)"이라 한다.
 	 * 
-	 * 
-	 * 인스턴스(instance)
+	 * instance(객체화)
 	 * 1. 클래스로부터 객체를 선언하는 과정을 클래스의 인스턴스화(=객체화)라고 한다.
 	 *    또한, 이렇게 선언된 해당 클래스 타입의 객체를 인스턴스(instance)라고 한다.
 	 *    즉, 인스턴스란 메모리에 할당된 객체를 의미한다.
 	 * 2. 하나의 클래스로부터 여러 개의 인스턴스를 생성할 수 있다.
 	 * 3. 생성된 인스턴스는 독립된 메모리 공간에 저장된 자신만의 필드를 가질 수 있다.
 	 * 4. 해당 클래스의 모든 method(함수)는 해당 클래스에서 생성된 모든 인스턴스가 공유하게 된다.
+	 * 
+	 * 
+	 * instance 선언 방법
+	 * 1. Car myCar; -> 클래스이름 객체참조변수이름;
+	 *    myCar = new Car(); -> 객체참조변수이름 = new 클래스이름();
+	 * 2. Car myCar = new Car(); -> 클래스이름 객체참조변수이름 = new 클래스이름();
 	 */
 	
 	// 필드 cadence, speed, gear는 객체의 상태를 나타낸다.

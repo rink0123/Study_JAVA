@@ -1,8 +1,0 @@
-변수(Variables)
-
-목차
-1. Variables.java
-2. JavaNamingConvention.java
-3. PrimitiveDataType.java
-4. ArraysAndArraysClass.java
-5. SummaryVariables.java

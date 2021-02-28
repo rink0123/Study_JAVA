@@ -1,7 +1,7 @@
 package ClassandObjects;
 
 /**
- * <h3>클래스 선언(DeclaringClasses)</h3>
+ * <h3>클래스 선언(Declaring Classes)</h3>
  * 
  * <h4>참고 사이트</h4>
  * <ul>

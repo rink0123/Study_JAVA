@@ -1,7 +1,7 @@
 package ClassandObjects;
 
 /**
- * <h3>this 키워드 사용(Using the this Keyword)</h3>
+ * <h3>this 키워드(Using the this Keyword)</h3>
  * 
  * <h4>참고 사이트</h4>
  * <ul>

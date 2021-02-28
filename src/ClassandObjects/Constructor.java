@@ -1,7 +1,7 @@
 package ClassandObjects;
 
 /**
- * <h3>메소드 선언(Declaring Methods)</h3>
+ * <h3>생성자(Constructors)</h3>
  * 
  * <h4>참고 사이트</h4>
  * <ul>
